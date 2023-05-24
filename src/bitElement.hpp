@@ -110,10 +110,3 @@ private:
 	// Internal data
 	std::uint8_t data[nBytes];
 };
-
-/*
-constexpr std::uint64_t ceilDiv8(const std::uint64_t x)
-{
-	return (x >> 3) + static_cast<bool>(x & 0x07);
-}
-*/
