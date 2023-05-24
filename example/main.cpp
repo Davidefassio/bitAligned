@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-#include <cmath>
-
 int main()
 {
     bitElement<9> e("101010101");
