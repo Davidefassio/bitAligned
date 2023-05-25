@@ -4,6 +4,9 @@
 
 int main()
 {
+    std::vector<bitElement<9>> be{bitElement<9>(1)};
+    bitAlignedVector<9> vec(be);
+
     /*
     bitElement<9> e("101010101");
 

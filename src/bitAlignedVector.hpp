@@ -176,13 +176,23 @@ public:
 	// Default constructor
 	bitAlignedVector() : data(nullptr), size(0), capacity(0)
 	{
+		std::cout << "Default const\n";
 	}
 
-	// Constrcutor from std::vector<bitElement<nbit>>
-	bitAlignedVector(const std::vector<bitElement<nbit>>& vec)
+	// Constructor from std::vector<bitElement<nbit>>
+	bitAlignedVector(const std::vector<bitElement<nbit>>& vec) : 
+		data(new std::uint8_t[bitElement<nbit>::ceilDiv8(nbit * vec.size())]),
+		size(vec.size()), capacity(vec.size())
 	{
-		std::uint64_t
-		data = new std::uint8_t[]
+		std::cout << "Const from vec of be\n";
+		std::cout << size << " " << capacity << std::endl;
+		std::cout << std::hex << data << std::endl;
+		std::cout << sizeof(data) << std::endl;
+	}
+
+	~bitAlignedVector()
+	{
+		delete[] data;
 	}
 
 private:
