@@ -1,9 +1,10 @@
-#include "../src/bitAligned.hpp"
+#include "../src/bitAlignedVector.hpp"
 
 #include <iostream>
 
 int main()
 {
+    /*
     bitElement<9> e("101010101");
 
     std::cout << e.nBytes << "\n";
@@ -30,4 +31,5 @@ int main()
     std::cout << f.toString() << std::endl;
 
     std::cout << e.toString() << std::endl;
+    */
 }
